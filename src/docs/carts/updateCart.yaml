@@ -1,0 +1,27 @@
+paths:
+  /api/carts/{id}:
+    put:
+      summary: Edita un carrito
+      tags:
+        - Carts
+      parameters:
+      - name: id
+        in: path
+        description: Se trabaja con el ID brindado
+        required: true
+        type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        "200":
+          description: Carrito Editado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "404":
+          description: Carrito no encontrado

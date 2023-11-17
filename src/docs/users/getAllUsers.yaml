@@ -1,0 +1,13 @@
+paths:
+  /api/users/:
+    get:
+      sumary: Obtiene todos los usuarios de la app
+      tags:
+        -Users
+      responses:
+        "200":
+          description: La operacion fue exitosa
+        "400":
+          description: Se enviò un dato no esperado
+        "500":
+          description: Error inesperado

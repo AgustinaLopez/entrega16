@@ -1,0 +1,17 @@
+paths:
+  /api/carts/{id}:
+    delete:
+      summary: Se elimina el carrito con ese ID
+      tags:
+        - Carts
+      parameters:
+      - name: id
+        in: path
+        description: Se toma el ID del carrito
+        required: true
+        type: string
+      responses:
+        "204":
+          description: Sin informacion adicional
+        "404":
+          description: Error - Carrito no encontrado

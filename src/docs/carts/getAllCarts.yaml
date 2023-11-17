@@ -1,0 +1,15 @@
+paths:
+  /api/carts:
+    get:
+      summary: Muestra todos los carritos habilitados
+      tags:
+        - Carts
+      responses:
+        "200":
+          description: Cada carrito Disponible
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
